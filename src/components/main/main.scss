@@ -1,0 +1,24 @@
+.main {
+  width: 100%;
+  margin: 0;
+  background-color: #F4F8FA;
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  h3 {
+    color: #1B31A8;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    span {
+      font-weight: 600;
+    }
+  }
+}
