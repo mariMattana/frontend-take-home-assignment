@@ -15,6 +15,7 @@ class SavingPlans extends Component {
     this.state = {
       amount: '0',
       date: moment(),
+      key: '',
     };
 
     this.handleAmountChange = this.handleAmountChange.bind(this);
@@ -25,10 +26,13 @@ class SavingPlans extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.keyPressed === 'right') {
+    if (this.state.key === 'right') {
       this.increaseMonth()
-    } else if (this.props.keyPressed === 'left') {
+    } else if (this.state.key === 'left') {
       this.decreaseMonth()
+    }
+    if (this.state.key !== '') {
+      this.setState({key: ''})
     }
   }
 
@@ -56,10 +60,14 @@ class SavingPlans extends Component {
   }
 
   handleKeyDown(e) {
-    if(this.props.keyPressed === 'right'){
-      this.increaseMonth
-    } else if (this.props.keyPressed === 'left') {
-      this.decreaseMonth
+    if(e.keyCode === 39){
+      this.setState({
+        key: 'right'
+      })
+    } else if(e.keyCode === 37){
+      this.setState({
+        key: 'left'
+      })
     }
   }
 
@@ -87,7 +95,11 @@ class SavingPlans extends Component {
               <label>
                 Reach goal by
               </label>
-              <div className='form-input variable-input input-goal'>
+              <div
+                className='form-input variable-input input-goal'
+                tabIndex="0"
+                onKeyDown={(e) => this.handleKeyDown(e)}
+              >
                 <span onClick={this.decreaseMonth}><img src={Arrow}/></span>
                 <div className='goal-date'>
                   <span className='goal-month'>{this.state.date.format('MMMM')}</span>
