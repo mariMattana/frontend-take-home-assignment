@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './App.scss';
 import { Main, Header } from './components'
 
 const App: React.FunctionComponent = () => {

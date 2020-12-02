@@ -15,7 +15,6 @@ class SavingPlans extends Component {
     this.state = {
       amount: '0',
       date: moment(),
-      cursor: 0,
     };
 
     this.handleAmountChange = this.handleAmountChange.bind(this);
@@ -25,13 +24,13 @@ class SavingPlans extends Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (this.props.keyPressed === 'right') {
-  //     this.increaseMonth()
-  //   } else if (this.props.keyPressed === 'left') {
-  //     this.decreaseMonth()
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (this.props.keyPressed === 'right') {
+      this.increaseMonth()
+    } else if (this.props.keyPressed === 'left') {
+      this.decreaseMonth()
+    }
+  }
 
   handleAmountChange(event, maskedvalue, floatvalue){
     this.setState({amount: maskedvalue});
@@ -48,14 +47,12 @@ class SavingPlans extends Component {
         prevState => ({ date: prevState.date.subtract(1, 'month') })
       )
     }
-    // event.preventDefault();
   }
 
   increaseMonth(event) {
     this.setState(prevState => ({
       date: prevState.date.add(1, 'month') })
     )
-    // event.preventDefault();
   }
 
   handleKeyDown(e) {

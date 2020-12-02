@@ -4,7 +4,6 @@ import SavingPlans from '../savingPlans'
 // styles
 import './main.scss'
 
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -13,6 +12,12 @@ class Main extends Component {
     };
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.state.key !== '') {
+      this.setState({key: ''})
+    }
   }
 
   handleKeyDown(e) {
@@ -29,7 +34,11 @@ class Main extends Component {
 
   render() {
     return(
-      <div className='main' tabIndex="0" onKeyDown={(e) => this.handleKeyDown(e)}>
+      <div
+        className='main'
+        tabIndex="0"
+        onKeyDown={(e) => this.handleKeyDown(e)}
+      >
         <h3>Let's plan your <span>saving goal.</span></h3>
         <SavingPlans keyPressed={this.state.key}/>
       </div>
