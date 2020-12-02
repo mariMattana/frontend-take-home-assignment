@@ -52,26 +52,6 @@
   border-radius: 32px;
 }
 
-.dollar-sign {
-  height: 20px;
-  width: 18px;
-  margin: 4% 1% 7% 4%;
-  border-radius: 0px;
-  vertical-align: middle;
-}
-
-.dollar-input {
-  height: 100%;
-  width: 85%;
-  border: none;
-  font-family: 'Rubik', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 120%;
-  color: #4D6475;
-}
-
 @media only screen and (min-width: 768px) {
   .saving-plans {
     margin-left: auto;
@@ -108,18 +88,5 @@
     margin-bottom: 1%;
     background: #1B31A8;
     border-radius: 32px;
-  }
-
-  .dollar-sign {
-    height: 24px;
-    width: 24px;
-    vertical-align: middle;
-    margin-left: 4%;
-  }
-
-  .dollar-input {
-    height: 100%;
-    width: 85%;
-    border: none;
   }
 }
