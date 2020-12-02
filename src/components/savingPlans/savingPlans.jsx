@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import CurrencyInput from 'react-currency-input'
-import moment from 'moment'
 import BuyHouse from './buyHouse'
 import FormDate from './formDate'
+import Confirmation from './confirmation'
 import Dollar from '../../icons/dollarSign.svg'
 
 // styles
@@ -49,20 +49,7 @@ class SavingPlans extends Component {
             </div>
             <FormDate/>
           </div>
-          <div className='confirmation form-input'>
-            <div className='installments'>
-              <p className='installment-text'>Monthly amount</p>
-              <p className='installment-value'>$521</p>
-            </div>
-            <div className='confirmation-text'>
-              <p>You're planning
-                <span> 48 monthly deposits </span>
-                to reach your
-                <span> $25,000 </span>
-                goal by 
-                <span> October 2020</span></p>
-            </div>
-          </div>
+          <Confirmation/>
           <input type="submit" value="Confirm" className='confirm-button'/>
         </form>
       </div>

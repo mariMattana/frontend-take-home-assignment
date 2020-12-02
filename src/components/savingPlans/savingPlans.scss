@@ -24,34 +24,6 @@
   .amount{
     width: 100%;
   }
-  .goal {
-    width: 100%;
-    div {
-      display: flex;
-      justify-content: space-between;
-      button {
-        background: #FFFFFF;
-        border: none;
-      }
-      .goal-date {
-        border: none;
-        display: table-cell;
-        vertical-align: middle;
-        .goal-month{
-          font-weight: 600;
-          font-size: 14px;
-          line-height: 21px;
-          text-align: center;
-        }
-        .goal-year {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 21px;
-          text-align: center;
-        }
-      }
-    }
-  }
   label {
     font-size: 12px;
     line-height: 18px;
@@ -64,33 +36,6 @@
   border-radius: 4px;
   :focus {
     outline: none;
-  }
-}
-
-.variable-input{
-  color: #CBD5DC;
-  height: 50px;
-}
-
-.confirmation {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  margin-top: 4%;
-  border-radius: 8px;
-  .confirmation-text {
-    margin: 0;
-    background: #F4F8FA;
-    height: 80px;
-    border-radius: 0px 0px 2px 2px;
-    p {
-      font-size: 12px;
-      margin: 0;
-      padding: 6% 4%;
-      span{
-        font-weight: 600;
-      }
-    }
   }
 }
 
@@ -129,27 +74,6 @@
   color: #4D6475;
 }
 
-.installments {
-  display: flex;
-  justify-content: center;
-  height: 77px;
-  .installment-text {
-    width: 70%;
-    margin: auto;
-    font-size: 18px;
-    line-height: 21.6px;
-  }
-  .installment-value {
-    width: 30%;
-    font-size: 24px;
-    line-height: 28.8px;
-    color: 0079FF;
-    font-family: 'Rubik', sans-serif;
-    text-align: end;
-    margin-right: 6%;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   .saving-plans {
     margin-left: auto;
@@ -169,74 +93,9 @@
         margin-right: 6%;
       }
     }
-    .goal {
-      width: 35%;
-      div {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 2%;
-        button {
-          background: #FFFFFF;
-          border: none;
-        }
-        .goal-date {
-          border: none;
-          font-family: 'Work Sans', sans-serif;
-          color: #1E2A32;
-          flex: none;
-          order: 0;
-          align-self: stretch;
-          flex-grow: 0;
-          margin: 0px 10px;
-          .goal-month{
-            font-size: 16px;
-            line-height: 24px;
-            flex: none;
-            order: 0;
-            align-self: stretch;
-            flex-grow: 0;
-            margin: 0px 10px;
-          }
-          .goal-year {
-            font-size: 16px;
-            line-height: 24px;
-          }
-        }
-      }
-    }
     label {
       font-size: 14px;
       line-height: 21px;
-    }
-  }
-
-  .form-input{
-    border: 1px solid #E9EEF2;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
-
-  .variable-input{
-    color: #CBD5DC;
-    height: 56px;
-  }
-
-  .confirmation {
-    width: 85%;
-    padding: 0;
-    margin: auto;
-    margin-top: 4%;
-    .confirmation-text {
-      margin: 0;
-      background: #F4F8FA;
-      p {
-        font-size: 12px;
-        margin: 0;
-        padding: 6% 4%;
-        span{
-          font-weight: 600;
-        }
-      }
     }
   }
 
@@ -264,27 +123,5 @@
     height: 100%;
     width: 85%;
     border: none;
-  }
-
-  .installments {
-    display: flex;
-    justify-content: center;
-    height: 77px;
-    p {
-      width: 50%;
-      margin: auto;
-      font-size: 20px;
-      line-height: 24px;
-      color: 1E2A32;
-    }
-    .installment-value {
-      width: 50%;
-      font-size: 32px;
-      line-height: 38.4px;
-      color: 0079FF;
-      font-family: 'Rubik', sans-serif;
-      text-align: end;
-      margin-right: 6%;
-    }
   }
 }
