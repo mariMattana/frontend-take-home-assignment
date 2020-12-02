@@ -1,1 +1,1 @@
-export { default } from './formDate'
+export { default } from './formDate';

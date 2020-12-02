@@ -1,1 +1,1 @@
-export { default } from './savingPlans'
+export { default } from './savingPlans';

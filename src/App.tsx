@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { Main, Header } from './components'
+import { Main, Header } from './components';
 
 const App: React.FunctionComponent = () => {
-  return ( 
+  return (
     <div>
-      <Header/>
-      <Main/>
+      <Header />
+      <Main />
     </div>
-  )
+  );
 };
 
 export default App;

@@ -1,1 +1,1 @@
-export { default } from './formAmount'
+export { default } from './formAmount';

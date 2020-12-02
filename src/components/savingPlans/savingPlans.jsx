@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import BuyHouse from './buyHouse'
-import FormAmount from './formAmount'
-import FormDate from './formDate'
-import Confirmation from './confirmation'
+import React, { Component } from 'react';
+import BuyHouse from './buyHouse';
+import FormAmount from './formAmount';
+import FormDate from './formDate';
+import Confirmation from './confirmation';
 
 // styles
-import './savingPlans.scss'
+import './savingPlans.scss';
 
 class SavingPlans extends Component {
   constructor(props) {
@@ -19,20 +19,20 @@ class SavingPlans extends Component {
   }
 
   render() {
-    return(
-      <div className='saving-plans'>
-        <BuyHouse/>
+    return (
+      <div className="saving-plans">
+        <BuyHouse />
         <form onSubmit={this.handleSubmit}>
-          <div className='simulation'>
-            <FormAmount/>
-            <FormDate/>
+          <div className="simulation">
+            <FormAmount />
+            <FormDate />
           </div>
-          <Confirmation/>
-          <input type="submit" value="Confirm" className='confirm-button'/>
+          <Confirmation />
+          <input type="submit" value="Confirm" className="confirm-button" />
         </form>
       </div>
-    )
+    );
   }
 }
 
- export default SavingPlans
+export default SavingPlans;

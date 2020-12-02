@@ -1,1 +1,1 @@
-export { default } from './buyHouse'
+export { default } from './buyHouse';
