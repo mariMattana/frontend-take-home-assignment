@@ -1,0 +1,92 @@
+.goal {
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: space-between;
+    button {
+      background: #FFFFFF;
+      border: none;
+    }
+    .goal-date {
+      border: none;
+      display: table-cell;
+      vertical-align: middle;
+      .goal-month{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+      }
+      .goal-year {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+      }
+    }
+  }
+}
+label {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.form-input{
+  border: 1px solid #E9EEF2;
+  box-sizing: border-box;
+  border-radius: 4px;
+  :focus {
+    outline: none;
+  }
+}
+
+.variable-input{
+  color: #CBD5DC;
+  height: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .goal {
+    width: 35%;
+    div {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 2%;
+      button {
+        background: #FFFFFF;
+        border: none;
+      }
+      .goal-date {
+        border: none;
+        font-family: 'Work Sans', sans-serif;
+        color: #1E2A32;
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 0px 10px;
+        .goal-month{
+          font-size: 16px;
+          line-height: 24px;
+          flex: none;
+          order: 0;
+          align-self: stretch;
+          flex-grow: 0;
+          margin: 0px 10px;
+        }
+        .goal-year {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  label {
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .variable-input{
+    height: 56px;
+  }
+}

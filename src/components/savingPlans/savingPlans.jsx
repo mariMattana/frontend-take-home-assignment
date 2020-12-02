@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import CurrencyInput from 'react-currency-input'
 import moment from 'moment'
 import BuyHouse from './buyHouse'
-import Arrow from '../../icons/arrow.svg'
-import RightArrow from '../../icons/rightArrow.svg'
+import FormDate from './formDate'
 import Dollar from '../../icons/dollarSign.svg'
 
 // styles
@@ -14,26 +13,10 @@ class SavingPlans extends Component {
     super(props);
     this.state = {
       amount: '0',
-      date: moment(),
-      key: '',
     };
 
     this.handleAmountChange = this.handleAmountChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.decreaseMonth = this.decreaseMonth.bind(this);
-    this.increaseMonth = this.increaseMonth.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.state.key === 'right') {
-      this.increaseMonth()
-    } else if (this.state.key === 'left') {
-      this.decreaseMonth()
-    }
-    if (this.state.key !== '') {
-      this.setState({key: ''})
-    }
   }
 
   handleAmountChange(event, maskedvalue, floatvalue){
@@ -42,33 +25,6 @@ class SavingPlans extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-  }
-
-  decreaseMonth(event) {
-    let month = moment()
-    if (month < this.state.date) {
-      this.setState(
-        prevState => ({ date: prevState.date.subtract(1, 'month') })
-      )
-    }
-  }
-
-  increaseMonth(event) {
-    this.setState(prevState => ({
-      date: prevState.date.add(1, 'month') })
-    )
-  }
-
-  handleKeyDown(e) {
-    if(e.keyCode === 39){
-      this.setState({
-        key: 'right'
-      })
-    } else if(e.keyCode === 37){
-      this.setState({
-        key: 'left'
-      })
-    }
   }
 
   render() {
@@ -91,23 +47,7 @@ class SavingPlans extends Component {
                   />
                 </div>
             </div>
-            <div className='goal'>
-              <label>
-                Reach goal by
-              </label>
-              <div
-                className='form-input variable-input input-goal'
-                tabIndex="0"
-                onKeyDown={(e) => this.handleKeyDown(e)}
-              >
-                <span onClick={this.decreaseMonth}><img src={Arrow}/></span>
-                <div className='goal-date'>
-                  <span className='goal-month'>{this.state.date.format('MMMM')}</span>
-                  <span className='goal-year'>{this.state.date.format('YYYY')}</span>
-                </div>
-                <span onClick={this.increaseMonth}><img src={RightArrow}/></span>
-              </div>
-            </div>
+            <FormDate/>
           </div>
           <div className='confirmation form-input'>
             <div className='installments'>
