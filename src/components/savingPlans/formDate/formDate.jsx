@@ -68,12 +68,12 @@ class FormDate extends Component {
           tabIndex="0"
           onKeyDown={(e) => this.handleKeyDown(e)}
         >
-          <span onClick={this.decreaseMonth}><img src={Arrow}/></span>
+          <span onClick={this.decreaseMonth}><img className='arrow' src={Arrow}/></span>
           <div className='goal-date'>
             <span className='goal-month'>{this.state.date.format('MMMM')}</span>
             <span className='goal-year'>{this.state.date.format('YYYY')}</span>
           </div>
-          <span onClick={this.increaseMonth}><img src={RightArrow}/></span>
+          <span onClick={this.increaseMonth}><img className='arrow' src={RightArrow}/></span>
         </div>
       </div>
     )

@@ -1,0 +1,41 @@
+.form-input{
+  border: 1px solid #E9EEF2;
+  box-sizing: border-box;
+  border-radius: 4px;
+  :focus {
+    outline: none;
+  }
+}
+
+.dollar-sign {
+  height: 20px;
+  width: 18px;
+  margin: 4% 1% 7% 4%;
+  border-radius: 0px;
+  vertical-align: middle;
+}
+
+.dollar-input {
+  height: 100%;
+  width: 85%;
+  border: none;
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  color: #4D6475;
+}
+
+@media only screen and (min-width: 768px) {
+  .dollar-sign {
+    height: 24px;
+    width: 24px;
+  }
+
+  .dollar-input {
+    height: 100%;
+    width: 85%;
+    border: none;
+  }
+}
